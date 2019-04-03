@@ -21,7 +21,7 @@ export default class App extends React.Component {
   }
   listener(file){
     this.setState({
-      file
+      files: [...this.state.files, file]
     })
   }
   handleChange(ev) {
