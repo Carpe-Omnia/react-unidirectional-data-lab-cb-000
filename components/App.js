@@ -12,7 +12,10 @@ export default class App extends React.Component {
   constructor (props) {
     super(props) ;
     this.listener = this.listener.bind(this);
-    this.setState({ files: fileStore.getState() });
+    this.setState({ 
+      files: fileStore.getState(),
+      selectedFileIndex: 0
+     });
   }
     componentDidMount() {
     fileStore.addListener(this.listener);
@@ -30,7 +33,9 @@ export default class App extends React.Component {
     // TODO Dispatch action
   }
   handleSelect(selectedFileIndex) {
-    // TODO Update selectedFileIndex state
+    this.setState({
+      selectedFileIndex
+    })
   }
   handleAdd(ev) {
     ev.preventDefault();
