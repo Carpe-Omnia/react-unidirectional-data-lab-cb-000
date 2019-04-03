@@ -10,6 +10,7 @@ import actions from '../actions';
 
 export default class App extends React.Component {
   constructor (props) {
+    super(props) ;
     this.listener = this.listener.bind(this);
     this.setState({ file: fileStore.getState() });
   }
