@@ -2,7 +2,7 @@
 
 import Store from './Store';
 
-class FileStore {
+class FileStore extends Store{
 }
 
 const fileStore = new FileStore([]);
