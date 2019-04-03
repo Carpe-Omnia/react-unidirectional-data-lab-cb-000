@@ -11,6 +11,9 @@ export default class Sidebar extends React.Component {
 
     return (
       <ul className="sidebar">
+        {this.props.files.map(function(file){
+          return <SidebarItem file={this.props.file} />
+        })}
       </ul>
     );
   }
